@@ -4,6 +4,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { HowItWorksComponent } from './how-it-works/how-it-works.component';
+import { RouterModule, Routes } from '@angular/router';
+import { AppRoutingModule } from './app-routing.module';
+import { AuthModule } from './auth/auth.module';
+import { UserModule } from './user/user.module';
+
 
 @NgModule({
   declarations: [
@@ -12,8 +17,12 @@ import { HowItWorksComponent } from './how-it-works/how-it-works.component';
     HowItWorksComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule,
+    AuthModule,
+    UserModule
   ],
+
   providers: [],
   bootstrap: [AppComponent]
 })
